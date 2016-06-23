@@ -7,5 +7,7 @@ defmodule Marketplace.Router do
 
   scope "/api", Marketplace do
     pipe_through :api
+
+    resources "/users", UserController, except: [:new, :edit]
   end
 end
