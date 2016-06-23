@@ -2,7 +2,7 @@ defmodule Marketplace.UserControllerTest do
   use Marketplace.ConnCase
 
   alias Marketplace.User
-  @valid_attrs %{email: "some content", password_digest: "some content", username: "some content"}
+  @valid_attrs %{email: "some content", password: "some content", username: "some content"}
   @invalid_attrs %{}
 
   setup %{conn: conn} do
@@ -34,7 +34,7 @@ defmodule Marketplace.UserControllerTest do
   test "creates and renders resource when data is valid", %{conn: conn} do
     conn = post conn, user_path(conn, :create), user: @valid_attrs
     assert json_response(conn, 201)["data"]["id"]
-    assert Repo.get_by(User, @valid_attrs)
+    assert Repo.get_by(User, email: @valid_attrs[:email])
   end
 
   test "does not create resource and renders errors when data is invalid", %{conn: conn} do
@@ -46,7 +46,7 @@ defmodule Marketplace.UserControllerTest do
     user = Repo.insert! %User{}
     conn = put conn, user_path(conn, :update, user), user: @valid_attrs
     assert json_response(conn, 200)["data"]["id"]
-    assert Repo.get_by(User, @valid_attrs)
+    assert Repo.get_by(User, email: @valid_attrs[:email])
   end
 
   test "does not update chosen resource and renders errors when data is invalid", %{conn: conn} do
