@@ -9,6 +9,8 @@ config :marketplace, Marketplace.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
+config :marketplace, sql_sandbox: true
+
 # Configure your database
 config :marketplace, Marketplace.Repo,
   adapter: Ecto.Adapters.Postgres,

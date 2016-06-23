@@ -6,6 +6,8 @@ defmodule Marketplace.UserControllerTest do
   @invalid_attrs %{}
 
   setup %{conn: conn} do
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Marketplace.Repo)
+    Ecto.Adapters.SQL.Sandbox.mode(Repo, {:shared, self()})
     {:ok, conn: put_req_header(conn, "accept", "application/json")}
   end
 
