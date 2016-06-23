@@ -19,3 +19,7 @@ config :marketplace, Marketplace.Repo,
   database: "marketplace_test",
   hostname: "db",
   pool: Ecto.Adapters.SQL.Sandbox
+
+# config/test.exs
+config :comeonin, :bcrypt_log_rounds, 4
+config :comeonin, :pbkdf2_rounds, 1

@@ -19,7 +19,7 @@ defmodule Marketplace.Mixfile do
   def application do
     [mod: {Marketplace, []},
      applications: [:phoenix, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex]]
+                    :phoenix_ecto, :postgrex, :comeonin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -34,7 +34,8 @@ defmodule Marketplace.Mixfile do
      {:postgrex, ">= 0.0.0"},
      {:phoenix_ecto, "~> 3.0"},
      {:gettext, "~> 0.9"},
-     {:cowboy, "~> 1.0"}]
+     {:cowboy, "~> 1.0"},
+     {:comeonin, "~> 2.4"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.
