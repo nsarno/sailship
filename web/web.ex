@@ -1,12 +1,12 @@
-defmodule Marketplace.Web do
+defmodule Sailship.Web do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
 
   This can be used in your application as:
 
-      use Marketplace.Web, :controller
-      use Marketplace.Web, :view
+      use Sailship.Web, :controller
+      use Sailship.Web, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -30,12 +30,12 @@ defmodule Marketplace.Web do
     quote do
       use Phoenix.Controller
 
-      alias Marketplace.Repo
+      alias Sailship.Repo
       import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
 
-      import Marketplace.Router.Helpers
-      import Marketplace.Gettext
+      import Sailship.Router.Helpers
+      import Sailship.Gettext
     end
   end
 
@@ -46,9 +46,9 @@ defmodule Marketplace.Web do
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
 
-      import Marketplace.Router.Helpers
-      import Marketplace.ErrorHelpers
-      import Marketplace.Gettext
+      import Sailship.Router.Helpers
+      import Sailship.ErrorHelpers
+      import Sailship.Gettext
     end
   end
 
@@ -62,10 +62,10 @@ defmodule Marketplace.Web do
     quote do
       use Phoenix.Channel
 
-      alias Marketplace.Repo
+      alias Sailship.Repo
       import Ecto
       import Ecto.Query, only: [from: 1, from: 2]
-      import Marketplace.Gettext
+      import Sailship.Gettext
     end
   end
 

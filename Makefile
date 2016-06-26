@@ -6,7 +6,7 @@ run:
 	docker-compose up
 
 test:
-	docker-compose run -e MIX_ENV=test api mix test
+	docker-compose run --rm -e MIX_ENV=test api mix test
 
 create_db:
 	docker-compose run -e MIX_ENV=test api mix ecto.create

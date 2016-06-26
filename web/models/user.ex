@@ -1,5 +1,5 @@
-defmodule Marketplace.User do
-  use Marketplace.Web, :model
+defmodule Sailship.User do
+  use Sailship.Web, :model
 
   schema "users" do
     field :username, :string

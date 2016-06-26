@@ -1,7 +1,7 @@
-defmodule Marketplace.UserController do
-  use Marketplace.Web, :controller
+defmodule Sailship.UserController do
+  use Sailship.Web, :controller
 
-  alias Marketplace.User
+  alias Sailship.User
 
   plug :scrub_params, "user" when action in [:create, :update]
 
@@ -22,7 +22,7 @@ defmodule Marketplace.UserController do
       {:error, changeset} ->
         conn
         |> put_status(:unprocessable_entity)
-        |> render(Marketplace.ChangesetView, "error.json", changeset: changeset)
+        |> render(Sailship.ChangesetView, "error.json", changeset: changeset)
     end
   end
 
@@ -41,7 +41,7 @@ defmodule Marketplace.UserController do
       {:error, changeset} ->
         conn
         |> put_status(:unprocessable_entity)
-        |> render(Marketplace.ChangesetView, "error.json", changeset: changeset)
+        |> render(Sailship.ChangesetView, "error.json", changeset: changeset)
     end
   end
 

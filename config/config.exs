@@ -6,12 +6,12 @@
 use Mix.Config
 
 # Configures the endpoint
-config :marketplace, Marketplace.Endpoint,
+config :sailship, Sailship.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
   secret_key_base: "Pk/3X0oQUGAx41NQggg+nMdDdgbF34oVMjxsmopMuKH8Yubs0+E0ud7+iiNCUqSf",
   render_errors: [accepts: ~w(json)],
-  pubsub: [name: Marketplace.PubSub,
+  pubsub: [name: Sailship.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
@@ -28,4 +28,4 @@ config :phoenix, :generators,
   migration: true,
   binary_id: false
 
-config :marketplace, ecto_repos: [Marketplace.Repo]
+config :sailship, ecto_repos: [Sailship.Repo]

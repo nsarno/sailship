@@ -1,21 +1,21 @@
-defmodule Marketplace.ErrorViewTest do
-  use Marketplace.ConnCase, async: true
+defmodule Sailship.ErrorViewTest do
+  use Sailship.ConnCase, async: true
 
   # Bring render/3 and render_to_string/3 for testing custom views
   import Phoenix.View
 
   test "renders 404.json" do
-    assert render(Marketplace.ErrorView, "404.json", []) ==
+    assert render(Sailship.ErrorView, "404.json", []) ==
            %{errors: %{detail: "Page not found"}}
   end
 
   test "render 500.json" do
-    assert render(Marketplace.ErrorView, "500.json", []) ==
+    assert render(Sailship.ErrorView, "500.json", []) ==
            %{errors: %{detail: "Server internal error"}}
   end
 
   test "render any other" do
-    assert render(Marketplace.ErrorView, "505.json", []) ==
+    assert render(Sailship.ErrorView, "505.json", []) ==
            %{errors: %{detail: "Server internal error"}}
   end
 end

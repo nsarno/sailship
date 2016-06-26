@@ -1,12 +1,12 @@
-defmodule Marketplace.UserControllerTest do
-  use Marketplace.ConnCase
+defmodule Sailship.UserControllerTest do
+  use Sailship.ConnCase
 
-  alias Marketplace.User
+  alias Sailship.User
   @valid_attrs %{email: "some content", password: "some content", username: "some content"}
   @invalid_attrs %{}
 
   setup %{conn: conn} do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Marketplace.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Sailship.Repo)
     Ecto.Adapters.SQL.Sandbox.mode(Repo, {:shared, self()})
     {:ok, conn: put_req_header(conn, "accept", "application/json")}
   end

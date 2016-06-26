@@ -1,4 +1,4 @@
-defmodule Marketplace.ConnCase do
+defmodule Sailship.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -20,15 +20,15 @@ defmodule Marketplace.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      alias Marketplace.Repo
+      alias Sailship.Repo
       import Ecto
       import Ecto.Changeset
       import Ecto.Query, only: [from: 1, from: 2]
 
-      import Marketplace.Router.Helpers
+      import Sailship.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint Marketplace.Endpoint
+      @endpoint Sailship.Endpoint
     end
   end
 

@@ -1,7 +1,7 @@
-defmodule Marketplace.UserTest do
-  use Marketplace.ModelCase
+defmodule Sailship.UserTest do
+  use Sailship.ModelCase
 
-  alias Marketplace.User
+  alias Sailship.User
 
   @valid_attrs %{email: "some content", password: "some content", username: "some content"}
   @invalid_attrs %{}

@@ -8,7 +8,7 @@ services:
     environment:
       MIX_ENV: dev
     volumes:
-      - .:/marketplace
+      - .:/app
     ports:
       - "4000:4000"
     depends_on:

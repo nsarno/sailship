@@ -1,4 +1,4 @@
-defmodule Marketplace.ErrorHelpers do
+defmodule Sailship.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -21,9 +21,9 @@ defmodule Marketplace.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(Marketplace.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(Sailship.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(Marketplace.Gettext, "errors", msg, opts)
+      Gettext.dgettext(Sailship.Gettext, "errors", msg, opts)
     end
   end
 end

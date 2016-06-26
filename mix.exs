@@ -1,8 +1,8 @@
-defmodule Marketplace.Mixfile do
+defmodule Sailship.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :marketplace,
+    [app: :sailship,
      version: "0.0.1",
      elixir: "~> 1.0",
      elixirc_paths: elixirc_paths(Mix.env),
@@ -17,7 +17,7 @@ defmodule Marketplace.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application do
-    [mod: {Marketplace, []},
+    [mod: {Sailship, []},
      applications: [:phoenix, :cowboy, :logger, :gettext,
                     :phoenix_ecto, :postgrex, :comeonin]]
   end

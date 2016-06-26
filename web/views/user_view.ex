@@ -1,12 +1,12 @@
-defmodule Marketplace.UserView do
-  use Marketplace.Web, :view
+defmodule Sailship.UserView do
+  use Sailship.Web, :view
 
   def render("index.json", %{users: users}) do
-    %{data: render_many(users, Marketplace.UserView, "user.json")}
+    %{data: render_many(users, Sailship.UserView, "user.json")}
   end
 
   def render("show.json", %{user: user}) do
-    %{data: render_one(user, Marketplace.UserView, "user.json")}
+    %{data: render_one(user, Sailship.UserView, "user.json")}
   end
 
   def render("user.json", %{user: user}) do

@@ -1,11 +1,11 @@
-defmodule Marketplace.ChangesetView do
-  use Marketplace.Web, :view
+defmodule Sailship.ChangesetView do
+  use Sailship.Web, :view
 
   @doc """
   Traverses and translates changeset errors.
 
   See `Ecto.Changeset.traverse_errors/2` and
-  `Marketplace.ErrorHelpers.translate_error/1` for more details.
+  `Sailship.ErrorHelpers.translate_error/1` for more details.
   """
   def translate_errors(changeset) do
     Ecto.Changeset.traverse_errors(changeset, &translate_error/1)

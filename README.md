@@ -1,4 +1,4 @@
-# Marketplace
+# Sailship
 
 To start your Phoenix app:
 
