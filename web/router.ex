@@ -7,7 +7,5 @@ defmodule Sailship.Router do
 
   scope "/api", Sailship do
     pipe_through :api
-
-    resources "/users", UserController, except: [:new, :edit]
   end
 end
